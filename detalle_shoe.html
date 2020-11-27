@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <link href="carrousel/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" type="image/svg" href="images/logo-ecommerce.svg" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">    
+    <title>Detalle</title>
+    <style>
+        .desc{
+            font-size: x-large;
+        }
+        a{
+          color: white;
+        }
+        a:hover{
+          color: white;
+        }
+      </style>
+</head>
+<body>
+    <!--barra de navegación-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+        <img src="images/logo-ecommerce.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo Ecommerce-App">
+        Ecommerce-App
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto ml-auto mt-2 mt-lg-0 text-center">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Usuario</a>
+                </li>
+            </ul>
+            
+            <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+                <a class="navbar-brand" data-toggle="modal" data-target="#modalCart">
+                    <img src="images/shopping-cart.svg" width="30" height="30" class="d-inline-block"  alt="shopping-cart">
+                </a>
+                <a class="navbar-brand" href="register.html">
+                  <img src="images/account-outline.png" width="30" height="30" class="d-inline-block"  alt="account-outline">
+              </a>
+                <input class="form-control mr-sm-2" type="search" placeholder="Producto" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+  </nav>
+  <!-- Detalle del Producto -->
+  <div class="album py-5 bg-light">
+      <div class="container">    
+        <div class="card card-cascade wider reverse">
+            <div class="view view-cascade overlay mr-auto ml-auto container">
+                <br>
+            <h1 class="card-title"><strong>Jordan 1 Mid Chicago Toe</strong></h1>
+            <hr>
+            <h5>Condition:<b class="primary-dark">New</b> |Ticker: <b>AJ1M-CHIT</b>|100% Authentic</h5>
+            <h5>Precio: <b>$180</b></h5>
+              <div class="container text-center">
+                  <button type="button" class="btn btn-sm btn-dark"><h6><a href="compra_producto.html">Comprar</a></h6></button>
+                  <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalCart"><h6>Agregar al carrito</h6></button>
+              </div>
+            </div>
+        <!-- Card image -->
+        <div class="view view-cascade overlay mr-auto ml-auto">
+            <img class="card-img-top" src="images/producto1.jpg"
+            alt="Air Jordan 1">
+            <hr>
+            <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+        <div class="card-body card-body-cascade text-center">
+            
+            <!-- Subtitle -->
+            <h6 class="font-weight-bold indigo-text py-2">Ecommerce-App</h6>
+            <!-- Text -->
+            <p class="card-text">STYLE 554724-069 + COLORWAY BLACK/GYM + RED-WHITE + RETAIL PRICE $115 + RELEASE DATE 04/01/2020
+            </p>
+            <!-- Compartir -->
+            <p>Compartir en:</p>
+            <!-- Linkedin -->
+            <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Twitter -->
+            <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+            <!-- Dribbble -->
+            <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+
+        </div>
+    </div>
+ </div>
+  <!-- Card -->
+  </div>
+  <!-- Modal: modalCart -->
+  <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Carrito de compras</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre del Producto</th>
+              <th>Precio</th>
+              <th>Remover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Air Jordan 1 Green</td>
+              <td>130$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Hoodie ESSENTIALS</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Air Jordan 1 Mid Toe</td>
+              <td>170$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr class="total">
+              <th scope="row"></th>
+              <td><strong>Total</strong></td>
+              <td><strong>$400</strong></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cerrar</button>
+        <button class="btn btn-danger"><a href="compra_producto.html">Comprar</a> </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal: modalCart -->
+<!-- Script's -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small bg-dark lighten-1">
+  <!-- Footer Elements -->
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="#">Ecommerce-App</a>
+      </div>
+</footer>
