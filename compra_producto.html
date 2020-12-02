@@ -70,12 +70,12 @@
             </ul>
             
             <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
-                <a class="navbar-brand" data-toggle="modal" data-target="#modalCart">
-                    <img src="images/shopping-cart.svg" width="30" height="30" class="d-inline-block"  alt="shopping-cart">
+                <a class="navbar-brand" href="" data-toggle="modal" data-target="#modalCart">
+                  <img src="images/shopping-cart.svg" width="27"  alt="shopping-cart">
                 </a>
                 <a class="navbar-brand" href="register.html">
-                  <img src="images/account-outline.png" width="30" height="30" class="d-inline-block"  alt="account-outline">
-              </a>
+                  <i class="far fa-user"></i>
+                </a>
                 <input class="form-control mr-sm-2" type="search" placeholder="Producto" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
@@ -99,7 +99,7 @@
               <!--Content-->
               <div class="p-4">
                 <p class="lead font-weight-bold">Seleccione su talla</p>
-                <p>Las tallas que se le muestran están en el selector son Europeas, sino no conoce su talla en EUR, vizualice la 
+                <p>Las tallas que se le muestran están en el selector son Europeas, sino no conoce su talla en EUR, visualice la 
                     <a class="enlace" href="tallas_calzado.html" target="_blank">tabla de tallas</a></p>
                 <select id="talla" class="custom-select" style="width: 150px">
                     <option selected>40</option>
@@ -165,14 +165,11 @@
             </div>
       </main>
   </div>
-  <!-- Central Modal Small -->
+  <!-- Central Modal Small método de pago -->
   <div class="modal fade" id="centralModalFluid" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
-  
     <!-- Change class .modal-sm to change the size of the modal -->
     <div class="modal-dialog modal-lg" role="document">
-  
-  
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title w-100" id="myModalLabel">Método de pago</h4>
@@ -180,28 +177,121 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-            <label>Número de tarjeta</label>
-            <input type="number" class="form-control" placeholder="XXXX XXXX XXXX XXXX">
-            <label>Fecha de expiración</label>
-            <input type="text" placeholder="MM/YYYY" class="form-control">
-            <label>Titular de la Tarjeta</label>
-            <input type="text" class="form-control">
-            <label>Código de seguridad</label>
-            <input type="number" class="form-control" placeholder="XXX">
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                <label class="form-check-label" for="materialUnchecked">Guardar datos de esta tarjeta para pagos futuros</label>
-            </div>
+        <div class="modal-body container">
+          <form action="" method="POST">
+            <table>
+              <th>
+                <tr>Número de tarjeta</tr>*
+                <tr><input type="number" class="form-control" placeholder="XXXX XXXX XXXX XXXX" required></tr>
+              </th>
+              <th>
+                <tr>Fecha de expiración</tr>*
+                <tr><input type="text" placeholder="MM/YYYY" class="form-control" required></tr>
+              </th>
+              <th>
+                <tr>Titular de la Tarjeta</tr>*
+                <tr><input type="text" class="form-control" required></tr>
+              </th>
+              <th>
+                <tr>Código de seguridad</tr>*
+                <tr><input type="number" class="form-control" placeholder="XXX" required></tr>
+              </th>
+              <th>
+                <tr>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                    <label class="form-check-label" for="materialUnchecked">Guardar datos de esta tarjeta para pagos futuros</label>
+                  </div>
+                </tr>
+              </th>
+            </table>
+          </form>
           </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Volver</button>
-          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Siguiente</button>
+          <button type="submit" class="btn btn-danger btn-sm" data-dismiss="modal" data-toggle="modal" data-target="#centralModalFluid2">Siguiente</button>
         </div>
       </div>
     </div>
   </div>
   <!-- Central Modal Small -->
+  <!-- Modal de direccion -->
+  <div class="modal fade" id="centralModalFluid2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <!-- Change class .modal-sm to change the size of the modal -->
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Dirección de entrega</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body container">
+          <form action="" method="POST">
+            <table>
+              <th>
+                <tr>Dirección domiciliaria</tr>*
+                <tr><input type="text" class="form-control" required></tr>
+              </th>
+              <th>
+                <tr>Distrito</tr>*
+                <tr><input type="text" class="form-control" required></tr>
+              </th>
+              <th>
+                <tr>Provincia</tr>*
+                <tr><input type="text" class="form-control" required></tr>
+              </th>
+              <th>
+                <tr>Referencia</tr>
+                <tr><textarea class="form-control" rows="3" cols="30">Este campo es opcional</textarea></tr>
+              </th>
+              <th>
+                <tr>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                    <label class="form-check-label" for="materialUnchecked">Guardar datos de esta dirección</label>
+                  </div>
+                </tr>
+              </th>
+            </table>
+          </form>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Volver</button>
+          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" data-toggle="modal" data-target="#centralModalFluid3">Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal finalizado -->
+  <div class="modal fade" id="centralModalFluid3" tabindex="-1" role="dialog" 
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-success " role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header text-center">
+          <h4 class="modal-title white-text w-100 font-weight-bold py-2">Compra realizada con éxito</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+          
+        </div>
+        <!--Body-->
+        <div class="modal-body text-center">
+          <i class="far fa-check-circle fa-10x"></i>
+          <div class="md-form mb-5">
+            <h2>¡Listo! Se acreditó tu pago</h2>
+          </div>
+        </div>
+        <!--Footer-->
+        <div class="modal-footer justify-content-center">
+          <a type="submit" class="btn btn-success waves-effect" data-dismiss="modal">Okay</a>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Script's -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
